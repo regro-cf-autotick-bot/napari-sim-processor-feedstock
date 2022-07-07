@@ -28,6 +28,7 @@ requirements:
     - numpy
     - python >=3.8
     - qtpy
+    - scikit-image
     - superqt >=0.3.2
 
 test:

@@ -29,7 +29,7 @@ requirements:
     - pandas  # Imported but not listed in requirements
     - python >=3.8
     - qtpy
-    - scikit-image  # Listed in requirements but not imported
+    # - scikit-image  # Listed in requirements but not imported
     - scipy  # Imported but not listed in requirements
     - superqt >=0.3.2
 

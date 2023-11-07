@@ -1,5 +1,5 @@
 {% set name = "napari-sim-processor" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-sim-processor-{{ version }}.tar.gz
-  sha256: 4125a050c6a381a9777f85d50e568138eab121b5204d54bf494097d06a169d15
+  sha256: b055e7cfe336bd2b0e1ba409513190ebb62fbc5d34f746a14e311a8f7dd3779f
 
 build:
   noarch: python

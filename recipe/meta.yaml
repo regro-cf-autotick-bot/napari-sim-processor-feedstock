@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-sim-processor-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/napari-sim-processor-{{ version }}.tar.gz
   sha256: b055e7cfe336bd2b0e1ba409513190ebb62fbc5d34f746a14e311a8f7dd3779f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   script_env:
     - QT_QPA_PLATFORM=offscreen
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - magicgui
@@ -27,7 +27,7 @@ requirements:
     - napari
     - numpy
     - pandas  # Imported but not listed in requirements
-    - python >=3.8
+    - python >={{ python_min }}
     - qtpy
     # - scikit-image  # Listed in requirements but not imported
     - scipy  # Imported but not listed in requirements
@@ -42,6 +42,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://github.com/andreabassi78/napari-sim-processor
